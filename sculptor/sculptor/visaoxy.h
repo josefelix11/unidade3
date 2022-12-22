@@ -11,6 +11,13 @@ class VisaoXY : public QWidget
 {
     Q_OBJECT
 public:
+
+    /**
+     * @brief Construtor da classe VisaoXY
+     * @param parent
+     * @details O construtor da classe VisaoXY é responsável por criar a janela principal do programa, onde é possível desenhar a escultura.
+    */
+
     explicit VisaoXY(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
     void mousePressEvent(QMouseEvent *event);
@@ -28,10 +35,16 @@ public:
 
     Sculptor *s;
 private:
+/**
+ * @brief pZ
+ * @details Essa variável é responsável por armazenar os voxels da escultura.
+*/
     vector<vector<Voxel>> pZ;
     int square;
 
 public slots:
+    /// @brief Esses métodos são responsáveis por armazenar os valores dos parâmetros da escultura.
+    
     void setXY(int X, int Y);
     void setZ(int Z);
     void setRadius(int _radius);

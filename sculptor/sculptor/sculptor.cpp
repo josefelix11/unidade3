@@ -5,6 +5,14 @@
 
 using namespace std;
 
+/**
+ * @brief Construtor da classe Sculptor
+ * @param _nx
+ * @param _ny
+ * @param _nz
+ * @details O construtor da classe Sculptor é responsável por criar a matriz 3D que representa a escultura.
+*/
+
 Sculptor::Sculptor(int _nx, int _ny, int _nz) {
     nx = _nx;
     ny = _ny;
@@ -30,12 +38,26 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz) {
 }
 
 Sculptor::~Sculptor(){
+    /**
+     * @brief Destrutor da classe Sculptor
+     * @details O destrutor da classe Sculptor é responsável por deletar a matriz 3D que representa a escultura.
+     * @details delete v[0][0] deleta a matriz 3D.
+     * @details delete v[0] deleta a matriz 2D.
+     * @details delete v deleta a matriz 1D.
+    */
+
     delete v[0][0];
     delete v[0];
     delete v;
 }
 
 void Sculptor::setColor(float r, float g, float b, float alpha){
+    /// @brief setColor
+    /// @param r 
+    /// @param g 
+    /// @param b 
+    /// @param alpha 
+
     if(r >= 0 && r <= 1)
         this -> r = r;
     if(g >= 0 && g <= 1)
@@ -48,6 +70,16 @@ void Sculptor::setColor(float r, float g, float b, float alpha){
 }
 
 void Sculptor::putVoxel(int x, int y, int z){
+/**
+ * @brief putVoxel
+ * @param x
+ * @param y
+ * @param z
+ * @details Essa função é responsável por ativar o voxel na posição (x,y,z) e atribuir a ele a cor atual de desenho.
+ * @details A função também verifica se a posição (x,y,z) está dentro dos limites da escultura.
+ * @details Se estiver, o voxel é ativado e recebe a cor atual de desenho.
+*/
+
     v[x][y][z].r = r;
     v[x][y][z].g = g;
     v[x][y][z].b = b;
@@ -55,11 +87,40 @@ void Sculptor::putVoxel(int x, int y, int z){
     v[x][y][z].isOn = true;
 }
 
-void Sculptor::cutVoxel(int x, int y, int z){
+void Sculptor::cutVoxel(int x, int y, int z){]
+/**
+ * @brief cutVoxel
+ * @param x
+ * @param y
+ * @param z
+ * @details Essa função é responsável por desativar o voxel na posição (x,y,z).
+ * 
+*/
     v[x][y][z].isOn = false;
 }
 
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
+
+    /**
+     * @brief putBox
+     * @param x0
+     * @param x1
+     * @param y0
+     * @param y1
+     * @param z0
+     * @param z1
+     * @details Essa função é responsável por ativar todos os voxels que satisfazem às equações:
+     * @details x0 <= x <= x1
+     * @details y0 <= y <= y1
+     * @details z0 <= z <= z1
+     * @details e atribuir a eles a cor atual de desenho.
+     * @details A função também verifica se a posição (x,y,z) está dentro dos limites da escultura.
+     * @details Se estiver, o voxel é ativado e recebe a cor atual de desenho.
+     * @details A função também verifica se a posição (x,y,z) está dentro dos limites da escultura.
+     * @details Se estiver, o voxel é ativado e recebe a cor atual de desenho.
+    */
+
+
     for(int x = x0; x < x1; x++){
         for(int y = y0; y < y1; y++){
             for(int z = z0; z < z1; z++){
@@ -70,6 +131,21 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
 }
 
 void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
+
+/**
+ * @brief cutBox
+ * @param x0
+ * @param x1
+ * @param y0
+ * @param y1
+ * @param z0
+ * @param z1
+ * @details Essa função é responsável por desativar todos os voxels que satisfazem às equações:
+ * @details x0 <= x <= x1
+ * @details y0 <= y <= y1
+ * @details z0 <= z <= z1
+*/
+
     for(int x = x0; x < x1; x++){
         for(int y = y0; y < y1; y++){
             for(int z = z0; z < z1; z++){
@@ -80,6 +156,18 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
 }
 
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
+/**
+ * @brief putSphere
+ * @param xcenter
+ * @param ycenter
+ * @param zcenter
+ * @param radius
+ * @details Essa função é responsável por ativar todos os voxels que satisfazem à equação:
+ * @details (x-xcenter)^2 + (y-ycenter)^2 + (z-zcenter)^2 <= radius^2
+ * @details e atribuir a eles a cor atual de desenho.
+*/
+
+
     float calcX, calcY, calcZ;
     for(int x = 0; x < nx; x++){
         for(int y = 0; y < ny; y++){
@@ -95,6 +183,16 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
 }
 
 void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
+/**
+ * @brief cutSphere
+ * @param xcenter
+ * @param ycenter
+ * @param zcenter
+ * @param radius
+*/
+
+
+
     float calcX, calcY, calcZ;
     for(int x = 0; x < nx; x++){
         for(int y = 0; y < ny; y++){
@@ -110,6 +208,18 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
 }
 
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+
+/**
+ * @brief putEllipsoid
+ * @param xcenter
+ * @param ycenter
+ * @param zcenter
+ * @param rx
+ * @param ry    
+ * @param rz
+*/
+
+
     float calcX, calcY, calcZ;
     for(int x = 0; x < nx; x++){
         for(int y = 0; y < ny; y++){
@@ -125,6 +235,16 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 }
 
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+    
+    /**
+     * @brief cutEllipsoid      
+     * @param xcenter
+     * @param ycenter
+     *  @param zcenter
+     * @param rx
+     * @param ry
+    */
+    
     float calcX, calcY, calcZ;
     for(int x = 0; x < nx; x++){
         for(int y = 0; y < ny; y++){
@@ -140,6 +260,13 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 }
 
 void Sculptor::writeOFF(const char* filename){
+/** 
+ * @brief writeOFF
+ * @param filename
+ * @details Essa função é responsável por escrever o arquivo OFF no disco.
+ * @details O arquivo OFF deve conter as informações do formato OFF, seguidas das coordenadas de todos os vértices ativos e, por fim, as faces (triângulos) correspondentes a cada voxel ativo.
+*/
+
     std::ofstream file;
 
     fixed(file);

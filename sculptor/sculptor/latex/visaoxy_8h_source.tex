@@ -1,0 +1,62 @@
+\hypertarget{visaoxy_8h_source}{}\doxysection{visaoxy.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VISAOXY\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VISAOXY\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}sculptor.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_visao_x_y}{VisaoXY}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     Q\_OBJECT}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{21     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_visao_x_y}{VisaoXY}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visao_x_y_a5457cc3b7acedfd245b9794cca581464}{paintEvent}}(QPaintEvent *event);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visao_x_y_a30e826f7fb091ceb098c2ab3a90b6bc2}{mousePressEvent}}(QMouseEvent *event);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} mouseReleaseEvent(QMouseEvent *event);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} mouseMoveEvent(QMouseEvent *event);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} typeShape;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} gridX, gridY, gridZ;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} x, y, z;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} rx, ry, rz;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} dimX, dimY, dimZ;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} radius;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} r, g, b;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} leftButtonPressed;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \mbox{\hyperlink{class_sculptor}{Sculptor}} *s;}
+\DoxyCodeLine{37 \textcolor{keyword}{private}:}
+\DoxyCodeLine{42     vector<vector<Voxel>> pZ;}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} square;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{47     }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visao_x_y_a5084a4bd4657d8f718dac9cf3592c58f}{setXY}}(\textcolor{keywordtype}{int} X, \textcolor{keywordtype}{int} Y);}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} setZ(\textcolor{keywordtype}{int} Z);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} setRadius(\textcolor{keywordtype}{int} \_radius);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} setRX(\textcolor{keywordtype}{int} \_rx);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} setRY(\textcolor{keywordtype}{int} \_ry);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} setRZ(\textcolor{keywordtype}{int} \_rz);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} setDimX(\textcolor{keywordtype}{int} \_dimX);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} setDimY(\textcolor{keywordtype}{int} \_dimY);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} setDimZ(\textcolor{keywordtype}{int} \_dimZ);}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} setCorR(\textcolor{keywordtype}{int} \_r);}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} setCorG(\textcolor{keywordtype}{int} \_g);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} setCorB(\textcolor{keywordtype}{int} \_b);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} createShape(\textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visao_x_y_ad1656ef6de4dabadfe7f7294dc7ce95e}{createOFF}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 signals:}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} mouseClickXY(\textcolor{keywordtype}{int}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{66 \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// VISAOXY\_H}}
+
+\end{DoxyCode}

@@ -8,6 +8,13 @@
 
 
 VisaoXY::VisaoXY(QWidget *parent) : QWidget{parent}{
+/**
+ * @brief Construtor da classe VisaoXY
+ * @param parent
+ * @details O construtor da classe VisaoXY é responsável por criar a janela principal do programa, onde é possível desenhar a escultura.
+ * @details Os valores iniciais dos parâmetros da escultura são definidos aqui.
+*/
+
     gridX = 30; gridY = 30; gridZ = 30;
     s = new Sculptor(gridX, gridY, gridZ);
     typeShape = 1;
@@ -19,6 +26,16 @@ VisaoXY::VisaoXY(QWidget *parent) : QWidget{parent}{
 }
 
 void VisaoXY::paintEvent(QPaintEvent *event){
+
+/**
+ * @brief paintEvent
+ * @param event
+ * @details Essa função é responsável por desenhar a escultura na janela principal do programa.
+ * @details A função é chamada toda vez que há uma mudança na escultura.
+*/
+
+
+
     QPainter painter(this);
     QBrush brush;
     QPen pen;
@@ -61,6 +78,24 @@ void VisaoXY::paintEvent(QPaintEvent *event){
 }
 
 void VisaoXY::mousePressEvent(QMouseEvent *event){
+/**
+ * @brief mousePressEvent
+ * @param event
+ * @details Essa função é responsável por receber os eventos de clique do mouse.
+ * @details A função é chamada toda vez que o usuário clica com o botão esquerdo do mouse.
+ * @details A função é responsável por chamar a função createShape, que é responsável por criar a forma desejada.
+ * @details A função também é responsável por chamar a função repaint, que é responsável por redesenhar a escultura na janela principal do programa.
+ * @details A função também é responsável por chamar a função setXY, que é responsável por definir as coordenadas x e y da forma desejada.
+ * @details A função também é responsável por chamar a função setZ, que é responsável por definir a coordenada z da forma desejada.
+ * @details A função também é responsável por chamar a função setRadius, que é responsável por definir o raio da forma desejada.
+ * @details A função também é responsável por chamar a função setColor, que é responsável por definir a cor da forma desejada.
+ * @details A função também é responsável por chamar a função setDim, que é responsável por definir as dimensões da forma desejada.
+ * @details A função também é responsável por chamar a função setRx, que é responsável por definir o valor de rx da forma desejada.
+ * @details A função também é responsável por chamar a função setRy, que é responsável por definir o valor de ry da forma desejada.
+ * @details A função também é responsável por chamar a função setRz, que é responsável por definir o valor de rz da forma desejada.
+ * @details A função também é responsável por chamar a função setDimX, que é responsável por definir o valor de dimX da forma desejada.
+*/
+
     if(event->button() == Qt::LeftButton ){
         emit mouseClickXY(event->x(), event->y());
 
@@ -176,6 +211,11 @@ void VisaoXY::createShape(int type){
 }
 
 void VisaoXY::createOFF(){
+    /**
+     * @brief s
+     * @details A função é responsável por criar um arquivo .off, que é o formato de arquivo utilizado para salvar a escultura.
+     * @details A função também é responsável por chamar a função writeOFF, que é responsável por escrever no arquivo .off.
+    */
     s->writeOFF("C:/Users/henri/OneDrive/Documentos/ProjetoU3/unidade3/sculptor/sculptor/docs/Visao.off");
     qDebug()<<"Criou off, ou deveria ter criado...";
 }
