@@ -23,7 +23,7 @@
 - [ ] O programa criado deverá ser documentado com Doxygen.
 - [ x ] O programa criado deverá ser hospedado no github e deverá ser provido um manual no arquivo README.md com instruções de compilação e uso do programa
 
-## ![image](https://user-images.githubusercontent.com/113564408/209196276-b8617c73-dcc6-4383-be84-b6ab5b57a126.png) Tutotial para execução da ferramenta
+## ![image](https://user-images.githubusercontent.com/113564408/209196372-cd657ee2-e73e-4d06-b34b-a76e4d8cb1dc.png) Tutotial para execução da ferramenta
 - 1. Fazer a instalação do qtCreator versão 5.15 
 - 2. Ir na opção Projeto e Importar os arquivos 
 - 3. Configurar os Pacotes MINGW ou GCC para a Compilação correta da ferramenta
@@ -33,8 +33,8 @@
 ## ✔️ Tutotial para usar a ferramenta 
 - 1. Selecionar a figura que deseja desenhar
 - 2. Dependendo da figura, configurar nos Sliders o raio, as dimensões em relação ao Eixo Z, e a proporção que deve ser desenhada.
-- 3. Ir no Sliders e Selecionar a cor da figura 
-- 4. Clicar dentro da grade de desenho de forma a desenhar a figura desejada 
-- 5. Após finalizada as configurações da figura ir até o Botão Salvar e gravar as alterações Feitas
+- 3. ![image](https://user-images.githubusercontent.com/113564408/209196815-2647d32b-896d-47f8-adc1-138ba9af1554.png) Ir no Sliders e Selecionar a cor da figura 
+- 4. ![image](https://user-images.githubusercontent.com/113564408/209196521-14da1482-4692-4995-861e-47d051fecf27.png) Clicar dentro da grade de desenho de forma a desenhar a figura desejada 
+- 5. ![image](https://user-images.githubusercontent.com/113564408/209196725-96f2dff6-baa2-413b-958b-aa5aadebff1d.png) Após finalizada as configurações da figura ir até o Botão Salvar e gravar as alterações Feitas
 
 
