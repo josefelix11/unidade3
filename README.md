@@ -36,6 +36,7 @@
 - 3. Ir no Sliders e Selecionar a cor da figura 
 - 4. Clicar dentro da grade de desenho de forma a desenhar a figura desejada 
 - 5. Após finalizada as configurações da figura ir até o Botão Salvar e gravar as alterações Feitas
-- 6. Para visualizar a Figura é necessario a instalação do MeshLab ou qualquer outra ferramenta com acesso a leitura de arquivo com a extensão .OFF
+- 6. Caso seja necessario ainda pode ser criado uma nova grid indo no botão new
+- 7. Para visualizar a Figura é necessario a instalação do MeshLab ou qualquer outra ferramenta com acesso a leitura de arquivo com a extensão .OFF
 
 
