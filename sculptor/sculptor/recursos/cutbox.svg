@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="148mm"
+   viewBox="0 0 210.00001 148"
+   version="1.1"
+   id="svg480"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="cutbox.svg"
+   inkscape:export-filename="cutbox.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview482"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.46769781"
+     inkscape:cx="272.61192"
+     inkscape:cy="213.81327"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs477" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-29.417141,-92.211426)">
+    <rect
+       style="fill:#000000;stroke-width:0.319099"
+       id="rect490"
+       width="131.18013"
+       height="90.84343"
+       x="50.914284"
+       y="136.008" />
+    <rect
+       style="fill:#000000;stroke-width:0.319099"
+       id="rect492"
+       width="142.33041"
+       height="71.681145"
+       x="65.590057"
+       y="116.18742" />
+    <rect
+       style="fill:#000000;stroke-width:0.319099"
+       id="rect494"
+       width="143.64224"
+       height="70.261711"
+       x="77.55204"
+       y="101.82859" />
+  </g>
+</svg>
