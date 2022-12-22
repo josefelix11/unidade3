@@ -17,6 +17,7 @@ public:
 
 public slots:
     void sair();
+    void setGrid();
 
     void setTypePutVoxel();
     void setTypeCutVoxel();

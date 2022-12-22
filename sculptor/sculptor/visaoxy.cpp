@@ -8,7 +8,8 @@
 
 
 VisaoXY::VisaoXY(QWidget *parent) : QWidget{parent}{
-    s = new Sculptor(30,30,30);
+    gridX = 30; gridY = 30; gridZ = 30;
+    s = new Sculptor(gridX, gridY, gridZ);
     typeShape = 1;
     x = 0; y = 0; z = 0;
     r = 0.0; g = 0.0; b = 0.0;
@@ -22,8 +23,8 @@ void VisaoXY::paintEvent(QPaintEvent *event){
     QBrush brush;
     QPen pen;
 
-    int nV = 30;
-    int nH = 30;
+    int nV = gridX;
+    int nH = gridY;
 
     pZ = s->sliceOfZ(z);
 
@@ -46,10 +47,10 @@ void VisaoXY::paintEvent(QPaintEvent *event){
     for(int i = 0; i < nV; i++){
         painter.drawLine(i*width()/nV, 0, i*width()/nV, height());
     }
-    for(int i = 0; i < 30; i++){
-        for(int j = 0; j < 30; j++){
+    for(int i = 0; i < nH; i++){
+        for(int j = 0; j < nV; j++){
             if(pZ[i][j].isOn){
-                brush.setColor(QColor(pZ[i][j].r,pZ[i][j].g,pZ[i][j].b));
+                brush.setColor(QColor(pZ[i][j].r*255,pZ[i][j].g*255,pZ[i][j].b*255));
                 brush.setStyle(Qt::SolidPattern);
                 qDebug()<<"r: "<<pZ[i][j].r<<" g: "<<pZ[i][j].g<<" b: "<<pZ[i][j].b;
                 painter.setBrush(brush);
@@ -66,8 +67,8 @@ void VisaoXY::mousePressEvent(QMouseEvent *event){
 }
 
 void VisaoXY::setXY(int X, int Y){
-    x = (X * 30)/width();
-    y = (Y * 30)/height();
+    x = (X * gridX)/width();
+    y = (Y * gridY)/height();
     qDebug() << "X = "<< x<< "Y = "<< y;
 }
 
