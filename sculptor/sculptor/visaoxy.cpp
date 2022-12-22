@@ -61,9 +61,29 @@ void VisaoXY::paintEvent(QPaintEvent *event){
 }
 
 void VisaoXY::mousePressEvent(QMouseEvent *event){
-    emit mouseClickXY(event->x(), event->y());
-    VisaoXY::createShape(typeShape);
-    repaint();
+    if(event->button() == Qt::LeftButton ){
+        emit mouseClickXY(event->x(), event->y());
+
+        leftButtonPressed = true;
+
+        VisaoXY::createShape(typeShape);
+        repaint();
+    }
+}
+
+void VisaoXY::mouseReleaseEvent(QMouseEvent *event){
+    if(!(event->button() == Qt::LeftButton)){
+        leftButtonPressed = false;
+    }
+}
+
+void VisaoXY::mouseMoveEvent(QMouseEvent *event){
+    if(leftButtonPressed){
+        emit mouseClickXY(event->x(), event->y());
+
+        VisaoXY::createShape(typeShape);
+        repaint();
+    }
 }
 
 void VisaoXY::setXY(int X, int Y){
@@ -156,6 +176,6 @@ void VisaoXY::createShape(int type){
 }
 
 void VisaoXY::createOFF(){
-    s->writeOFF("C:/Users/henri/OneDrive/Documentos/UFRN/PA/Unidade3/programacao_avancada/programacaoAvancada/Unidade 3/sculptor/docs/Visao.off");
+    s->writeOFF("C:/Users/henri/OneDrive/Documentos/ProjetoU3/unidade3/sculptor/sculptor/docs/Visao.off");
     qDebug()<<"Criou off, ou deveria ter criado...";
 }

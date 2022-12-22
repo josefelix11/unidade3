@@ -14,6 +14,8 @@ public:
     explicit VisaoXY(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
     void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
 
     int typeShape;
     int gridX, gridY, gridZ;
@@ -22,6 +24,7 @@ public:
     int dimX, dimY, dimZ;
     int radius;
     float r, g, b;
+    bool leftButtonPressed;
 
     Sculptor *s;
 private:
