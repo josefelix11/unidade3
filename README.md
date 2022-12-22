@@ -31,10 +31,10 @@
 - 5. Para sair é só salvar a figura ou precionar o botão de sair para fechar a ferramenta
 
 ## ✔️ Tutotial para usar a ferramenta 
-- 1. Selecionar a figura que deseja desenhar
-- 2. Dependendo da figura configurar nos Sliders o raio, as dimensões em relação e a proporção que deve ser desenhada no Eixo Z.
-- 3. Ir no Sliders e Selecionar a cor da figura 
-- 4. Clicar dentro da grade de desenho de forma a desenhar a figura desejada 
-- 5. Após finalizada as configurações da figura ir até o Botão Salvar e gravar as alterações Feitas
+1. Selecionar a figura que deseja desenhar
+2. Dependendo da figura configurar nos Sliders o raio, as dimensões em relação e a proporção que deve ser desenhada no Eixo Z.
+3. Ir no Sliders e Selecionar a cor da figura 
+4. Clicar dentro da grade de desenho de forma a desenhar a figura desejada 
+5. Após finalizada as configurações da figura ir até o Botão Salvar e gravar as alterações Feitas
 
 
