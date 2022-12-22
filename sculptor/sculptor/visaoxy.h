@@ -14,13 +14,19 @@ public:
     explicit VisaoXY(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
     void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
 
     int typeShape;
+    int gridX, gridY, gridZ;
     int x, y, z;
     int rx, ry, rz;
     int dimX, dimY, dimZ;
     int radius;
     float r, g, b;
+    bool leftButtonPressed;
+
+    Sculptor *s;
 private:
     vector<vector<Voxel>> pZ;
     int square;
@@ -41,9 +47,6 @@ public slots:
 
     void createShape(int type);
     void createOFF();
-
-private:
-    Sculptor *s;
 
 signals:
     void mouseClickXY(int, int);

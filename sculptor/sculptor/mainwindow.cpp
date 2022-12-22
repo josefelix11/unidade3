@@ -8,6 +8,19 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow){
     ui->setupUi(this);
 
+    ui->horizontalSliderZ->setMaximum(ui->widget->gridZ);
+
+    ui->horizontalSliderRaio->setMaximum(ui->widget->gridX/2 - 1);
+
+    ui->horizontalSliderRX->setMaximum(ui->widget->gridX/2 - 1);
+    ui->horizontalSliderRY->setMaximum(ui->widget->gridY/2 - 1);
+    ui->horizontalSliderRZ->setMaximum(ui->widget->gridZ/2 - 1);
+
+    ui->horizontalSliderDimX->setMaximum(ui->widget->gridX - 1);
+    ui->horizontalSliderDimY->setMaximum(ui->widget->gridY - 1);
+    ui->horizontalSliderDimZ->setMaximum(ui->widget->gridZ - 1);
+
+
     connect(ui->horizontalSliderR, SIGNAL(valueChanged(int)), ui->widget, SLOT(setCorR(int)));
     connect(ui->horizontalSliderG, SIGNAL(valueChanged(int)), ui->widget, SLOT(setCorG(int)));
     connect(ui->horizontalSliderB, SIGNAL(valueChanged(int)), ui->widget, SLOT(setCorB(int)));
@@ -37,6 +50,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->pushButtonSave, SIGNAL(clicked(bool)), ui->widget, SLOT(createOFF()));
 
+    connect(ui->pushButtonNew, SIGNAL(clicked(bool)), this, SLOT(setGrid()));
+
 }
 
 MainWindow::~MainWindow(){
@@ -45,6 +60,28 @@ MainWindow::~MainWindow(){
 
 void MainWindow::sair(){
     exit(0);
+}
+
+void MainWindow::setGrid(){
+    ui->widget->gridX = ui->horizontalSliderDimXGrid->value();
+    ui->widget->gridY = ui->horizontalSliderDimYGrid->value();
+    ui->widget->gridZ = ui->horizontalSliderDimZGrid->value();
+
+    ui->widget->s->~Sculptor();
+    ui->widget->s = new Sculptor(ui->widget->gridX, ui->widget->gridY, ui->widget->gridZ);
+
+    ui->horizontalSliderZ->setMaximum(ui->widget->gridZ);
+
+    ui->horizontalSliderRaio->setMaximum(ui->widget->gridX/2);
+
+    ui->horizontalSliderRX->setMaximum(ui->widget->gridX/2);
+    ui->horizontalSliderRY->setMaximum(ui->widget->gridY/2);
+    ui->horizontalSliderRZ->setMaximum(ui->widget->gridZ/2);
+
+    ui->horizontalSliderDimX->setMaximum(ui->widget->gridX - 1);
+    ui->horizontalSliderDimY->setMaximum(ui->widget->gridY - 1);
+    ui->horizontalSliderDimZ->setMaximum(ui->widget->gridZ - 1);
+    ui->widget->repaint();
 }
 
 void MainWindow::setTypePutVoxel(){
