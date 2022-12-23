@@ -13,15 +13,37 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">MainWindow{
+	background-color:#808080;
+}
+
+
+#pushButtonNew{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	width: ;
+	border:#fff;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="VisaoXY" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>130</y>
+      <y>140</y>
       <width>331</width>
       <height>331</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButtonSave{
+	background-color:144;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -39,7 +61,7 @@
        <property name="title">
         <string>Dimenções do grid</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -493,25 +515,85 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>30</y>
-      <width>411</width>
-      <height>56</height>
+      <x>10</x>
+      <y>50</y>
+      <width>501</width>
+      <height>71</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Gill Sans MT</family>
+     </font>
+    </property>
     <layout class="QGridLayout" name="gridLayout_4">
-     <item row="1" column="3">
-      <widget class="QPushButton" name="pushButtonCutEllipsoid">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButtonNew">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+#pushButtonSave{
+	background-color:#008;
+	color:#fff;
+	border-radius:15px;
+}</string>
+       </property>
        <property name="text">
-        <string>CutEllipsoid</string>
+        <string>NEW</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButtonSave">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+#pushButtonSave{
+	background-color:#008;
+	color:#fff;
+	border-radius:15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Save</string>
        </property>
       </widget>
      </item>
      <item row="0" column="4">
       <widget class="QPushButton" name="pushButtonPutSphere">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButtonPutSphere{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
        <property name="text">
         <string>PutSphere</string>
        </property>
@@ -519,34 +601,80 @@
      </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="pushButtonPutVoxel">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButtonPutVoxel{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
        <property name="text">
         <string>PutVoxel</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="pushButtonPutEllipsoid">
-       <property name="text">
-        <string>PutEllipsoid</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="pushButtonPutBox">
-       <property name="text">
-        <string>PutBox</string>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="2">
       <widget class="QPushButton" name="pushButtonCutBox">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+#pushButtonCutBox{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
        <property name="text">
         <string>CutBox</string>
        </property>
       </widget>
      </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="pushButtonCutEllipsoid">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButtonCutEllipsoid{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
+       <property name="text">
+        <string>CutEllipsoid</string>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="4">
       <widget class="QPushButton" name="pushButtonCutSphere">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButtonCutSphere{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
        <property name="text">
         <string>CutSphere</string>
        </property>
@@ -554,28 +682,67 @@
      </item>
      <item row="1" column="1">
       <widget class="QPushButton" name="pushButtonCutVoxel">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButtonCutVoxel{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
        <property name="text">
         <string>CutVoxel</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButtonNew">
+     <item row="0" column="3">
+      <widget class="QPushButton" name="pushButtonPutEllipsoid">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButtonPutEllipsoid{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
        <property name="text">
-        <string>NEW</string>
+        <string>PutEllipsoid</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButtonSave">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButtonPutBox">
+       <property name="font">
+        <font>
+         <family>Gill Sans MT</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButtonPutBox{
+	background-color:#008;
+	color:#fff;
+	border-radius:10px;
+	border:#fff;
+}</string>
+       </property>
        <property name="text">
-        <string>Save</string>
+        <string>PutBox</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -586,7 +753,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3"/>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -597,6 +764,33 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4"/>
    </widget>
+   <widget class="QLabel" name="LT">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>0</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI Light</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#LT{
+	font-size:36px;
+}</string>
+    </property>
+    <property name="text">
+     <string>SCULPTOR 3D</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -604,7 +798,7 @@
      <x>0</x>
      <y>0</y>
      <width>845</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArquivo">
@@ -619,27 +813,6 @@
    <addaction name="menuArquivo"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QToolBar" name="toolBar">
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>LeftToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-   <addaction name="actionNew"/>
-   <addaction name="actionsave"/>
-   <addaction name="actionPutV"/>
-   <addaction name="actionCutV"/>
-   <addaction name="actionPutBox"/>
-   <addaction name="actionCutB"/>
-   <addaction name="actionPutE"/>
-   <addaction name="actionCutE"/>
-   <addaction name="actionPutEs"/>
-   <addaction name="actionCutEs"/>
-  </widget>
   <action name="actionSair">
    <property name="icon">
     <iconset resource="recursos.qrc">

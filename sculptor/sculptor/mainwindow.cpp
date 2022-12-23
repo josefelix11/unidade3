@@ -110,7 +110,7 @@ void MainWindow::setGrid(){
     ui->horizontalSliderRY->setMaximum(ui->widget->gridY/2);
     ui->horizontalSliderRZ->setMaximum(ui->widget->gridZ/2);
 
-    ui->horizontalSliderDimX->setMaximum(ui->widget->gridX - 1);S
+    ui->horizontalSliderDimX->setMaximum(ui->widget->gridX - 1);
     ui->horizontalSliderDimY->setMaximum(ui->widget->gridY - 1);
     ui->horizontalSliderDimZ->setMaximum(ui->widget->gridZ - 1);
     ui->widget->repaint();

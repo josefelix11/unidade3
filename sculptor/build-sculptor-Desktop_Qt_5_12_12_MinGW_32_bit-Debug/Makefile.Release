@@ -241,7 +241,7 @@ release/moc_mainwindow.cpp: ../sculptor/mainwindow.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qicon.h \
 		release/moc_predefs.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.12.12\5.12.12\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/Jose Felix/Documents/git/Unidade 3/sculptor/build-sculptor-Desktop_Qt_5_12_12_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/mkspecs/win32-g++ -I"C:/Users/Jose Felix/Documents/git/Unidade 3/sculptor/sculptor" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.12.12/Tools/mingw730_32/i686-w64-mingw32/include ..\sculptor\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\Qt5.12.12\5.12.12\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/Jose Felix/Documents/git/unidade3/sculptor/build-sculptor-Desktop_Qt_5_12_12_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/mkspecs/win32-g++ -I"C:/Users/Jose Felix/Documents/git/unidade3/sculptor/sculptor" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.12.12/Tools/mingw730_32/i686-w64-mingw32/include ..\sculptor\mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_visaoxy.cpp: ../sculptor/visaoxy.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QWidget \
@@ -350,7 +350,7 @@ release/moc_visaoxy.cpp: ../sculptor/visaoxy.h \
 		../sculptor/sculptor.h \
 		release/moc_predefs.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.12.12\5.12.12\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/Jose Felix/Documents/git/Unidade 3/sculptor/build-sculptor-Desktop_Qt_5_12_12_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/mkspecs/win32-g++ -I"C:/Users/Jose Felix/Documents/git/Unidade 3/sculptor/sculptor" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.12.12/Tools/mingw730_32/i686-w64-mingw32/include ..\sculptor\visaoxy.h -o release\moc_visaoxy.cpp
+	C:\Qt\Qt5.12.12\5.12.12\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/Jose Felix/Documents/git/unidade3/sculptor/build-sculptor-Desktop_Qt_5_12_12_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/mkspecs/win32-g++ -I"C:/Users/Jose Felix/Documents/git/unidade3/sculptor/sculptor" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.12.12/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.12.12/Tools/mingw730_32/i686-w64-mingw32/include ..\sculptor\visaoxy.h -o release\moc_visaoxy.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -704,6 +704,48 @@ release/mainwindow.o: ../sculptor/mainwindow.cpp ../sculptor/mainwindow.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qicon.h \
 		ui_mainwindow.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/QVariant \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QAction \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qaction.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QApplication \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qapplication.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/qeventloop.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qguiapplication.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QGridLayout \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QGroupBox \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qgroupbox.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QHBoxLayout \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QLCDNumber \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qlcdnumber.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QLabel \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qlabel.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QMenu \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qmenu.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QMenuBar \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qmenubar.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QPushButton \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QSlider \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qslider.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qabstractslider.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QStatusBar \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qstatusbar.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QToolBar \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qtoolbar.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QWidget \
+		../sculptor/visaoxy.h \
+		../sculptor/sculptor.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\sculptor\mainwindow.cpp
 

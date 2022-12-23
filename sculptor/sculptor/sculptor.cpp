@@ -87,7 +87,7 @@ void Sculptor::putVoxel(int x, int y, int z){
     v[x][y][z].isOn = true;
 }
 
-void Sculptor::cutVoxel(int x, int y, int z){]
+void Sculptor::cutVoxel(int x, int y, int z){
 /**
  * @brief cutVoxel
  * @param x

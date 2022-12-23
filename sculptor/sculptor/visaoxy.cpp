@@ -216,6 +216,6 @@ void VisaoXY::createOFF(){
      * @details A função é responsável por criar um arquivo .off, que é o formato de arquivo utilizado para salvar a escultura.
      * @details A função também é responsável por chamar a função writeOFF, que é responsável por escrever no arquivo .off.
     */
-    s->writeOFF("C:/Users/henri/OneDrive/Documentos/ProjetoU3/unidade3/sculptor/sculptor/docs/Visao.off");
+    s->writeOFF("C:/Users/Jose Felix/Documents/git/unidade3/sculptor/sculptor/docs/Visao.off");
     qDebug()<<"Criou off, ou deveria ter criado...";
 }

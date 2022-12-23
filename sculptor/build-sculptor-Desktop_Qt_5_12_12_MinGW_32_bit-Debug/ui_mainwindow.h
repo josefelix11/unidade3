@@ -23,7 +23,6 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "visaoxy.h"
@@ -47,19 +46,20 @@ public:
     QWidget *centralwidget;
     VisaoXY *widget;
     QWidget *layoutWidget;
-    QHBoxLayout *horizontalLayout_3;
-    QPushButton *pushButtonNew;
-    QPushButton *pushButtonSave;
-    QPushButton *pushButtonPutVoxel;
-    QPushButton *pushButtonCutVoxel;
-    QPushButton *pushButtonPutBox;
-    QPushButton *pushButtonCutBox;
-    QPushButton *pushButtonPutEllipsoid;
-    QPushButton *pushButtonCutEllipsoid;
-    QPushButton *pushButtonPutSphere;
-    QPushButton *pushButtonCutSphere;
-    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
+    QGroupBox *groupBox_2;
+    QWidget *layoutWidget1;
+    QHBoxLayout *horizontalLayout;
+    QGridLayout *gridLayout_9;
+    QSlider *horizontalSliderDimYGrid;
+    QSlider *horizontalSliderDimXGrid;
+    QLCDNumber *lcdNumber_9;
+    QLabel *label_3;
+    QLCDNumber *lcdNumber_8;
+    QLabel *label;
+    QLabel *label_2;
+    QLCDNumber *lcdNumber_7;
+    QSlider *horizontalSliderDimZGrid;
     QGroupBox *groupBoxRaio;
     QWidget *layoutWidget2;
     QGridLayout *gridLayout_6;
@@ -68,15 +68,15 @@ public:
     QGroupBox *groupBoxElipse;
     QGridLayout *gridLayout_3;
     QGridLayout *gridLayout;
-    QLabel *labelRx;
-    QLabel *labelRy;
     QLabel *labelRz;
     QSlider *horizontalSliderRX;
-    QSlider *horizontalSliderRZ;
     QSlider *horizontalSliderRY;
-    QLCDNumber *lcdNumber_4;
-    QLCDNumber *lcdNumber_5;
     QLCDNumber *lcdNumber_6;
+    QSlider *horizontalSliderRZ;
+    QLabel *labelRx;
+    QLCDNumber *lcdNumber_5;
+    QLabel *labelRy;
+    QLCDNumber *lcdNumber_4;
     QGroupBox *groupBoxCaixa;
     QGridLayout *gridLayout_2;
     QGridLayout *gridLayout_5;
@@ -109,16 +109,44 @@ public:
     QLCDNumber *lcdNumberR;
     QLabel *labelR;
     QSlider *horizontalSliderR;
+    QWidget *layoutWidget6;
+    QGridLayout *gridLayout_4;
+    QPushButton *pushButtonNew;
+    QPushButton *pushButtonSave;
+    QPushButton *pushButtonPutSphere;
+    QPushButton *pushButtonPutVoxel;
+    QPushButton *pushButtonCutBox;
+    QPushButton *pushButtonCutEllipsoid;
+    QPushButton *pushButtonCutSphere;
+    QPushButton *pushButtonCutVoxel;
+    QPushButton *pushButtonPutEllipsoid;
+    QPushButton *pushButtonPutBox;
+    QWidget *layoutWidget7;
+    QHBoxLayout *horizontalLayout_3;
+    QWidget *layoutWidget8;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *LT;
     QMenuBar *menubar;
     QMenu *menuArquivo;
     QStatusBar *statusbar;
-    QToolBar *toolBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(817, 602);
+        MainWindow->resize(845, 666);
+        MainWindow->setStyleSheet(QString::fromUtf8("MainWindow{\n"
+"	background-color:#808080;\n"
+"}\n"
+"\n"
+"\n"
+"#pushButtonNew{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	width: ;\n"
+"	border:#fff;\n"
+"}"));
         actionSair = new QAction(MainWindow);
         actionSair->setObjectName(QString::fromUtf8("actionSair"));
         QIcon icon;
@@ -176,76 +204,96 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         widget = new VisaoXY(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(100, 40, 331, 331));
+        widget->setGeometry(QRect(100, 140, 331, 331));
+        widget->setStyleSheet(QString::fromUtf8("#pushButtonSave{\n"
+"	background-color:144;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 0, 856, 31));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        pushButtonNew = new QPushButton(layoutWidget);
-        pushButtonNew->setObjectName(QString::fromUtf8("pushButtonNew"));
-
-        horizontalLayout_3->addWidget(pushButtonNew);
-
-        pushButtonSave = new QPushButton(layoutWidget);
-        pushButtonSave->setObjectName(QString::fromUtf8("pushButtonSave"));
-
-        horizontalLayout_3->addWidget(pushButtonSave);
-
-        pushButtonPutVoxel = new QPushButton(layoutWidget);
-        pushButtonPutVoxel->setObjectName(QString::fromUtf8("pushButtonPutVoxel"));
-
-        horizontalLayout_3->addWidget(pushButtonPutVoxel);
-
-        pushButtonCutVoxel = new QPushButton(layoutWidget);
-        pushButtonCutVoxel->setObjectName(QString::fromUtf8("pushButtonCutVoxel"));
-
-        horizontalLayout_3->addWidget(pushButtonCutVoxel);
-
-        pushButtonPutBox = new QPushButton(layoutWidget);
-        pushButtonPutBox->setObjectName(QString::fromUtf8("pushButtonPutBox"));
-
-        horizontalLayout_3->addWidget(pushButtonPutBox);
-
-        pushButtonCutBox = new QPushButton(layoutWidget);
-        pushButtonCutBox->setObjectName(QString::fromUtf8("pushButtonCutBox"));
-
-        horizontalLayout_3->addWidget(pushButtonCutBox);
-
-        pushButtonPutEllipsoid = new QPushButton(layoutWidget);
-        pushButtonPutEllipsoid->setObjectName(QString::fromUtf8("pushButtonPutEllipsoid"));
-
-        horizontalLayout_3->addWidget(pushButtonPutEllipsoid);
-
-        pushButtonCutEllipsoid = new QPushButton(layoutWidget);
-        pushButtonCutEllipsoid->setObjectName(QString::fromUtf8("pushButtonCutEllipsoid"));
-
-        horizontalLayout_3->addWidget(pushButtonCutEllipsoid);
-
-        pushButtonPutSphere = new QPushButton(layoutWidget);
-        pushButtonPutSphere->setObjectName(QString::fromUtf8("pushButtonPutSphere"));
-
-        horizontalLayout_3->addWidget(pushButtonPutSphere);
-
-        pushButtonCutSphere = new QPushButton(layoutWidget);
-        pushButtonCutSphere->setObjectName(QString::fromUtf8("pushButtonCutSphere"));
-
-        horizontalLayout_3->addWidget(pushButtonCutSphere);
-
-        layoutWidget1 = new QWidget(centralwidget);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(530, 50, 261, 311));
-        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
+        layoutWidget->setGeometry(QRect(530, 30, 261, 471));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        groupBoxRaio = new QGroupBox(layoutWidget1);
+        groupBox_2 = new QGroupBox(layoutWidget);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        layoutWidget1 = new QWidget(groupBox_2);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(10, 20, 241, 85));
+        horizontalLayout = new QHBoxLayout(layoutWidget1);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        gridLayout_9 = new QGridLayout();
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        horizontalSliderDimYGrid = new QSlider(layoutWidget1);
+        horizontalSliderDimYGrid->setObjectName(QString::fromUtf8("horizontalSliderDimYGrid"));
+        horizontalSliderDimYGrid->setMinimum(5);
+        horizontalSliderDimYGrid->setMaximum(30);
+        horizontalSliderDimYGrid->setOrientation(Qt::Horizontal);
+
+        gridLayout_9->addWidget(horizontalSliderDimYGrid, 1, 1, 1, 1);
+
+        horizontalSliderDimXGrid = new QSlider(layoutWidget1);
+        horizontalSliderDimXGrid->setObjectName(QString::fromUtf8("horizontalSliderDimXGrid"));
+        horizontalSliderDimXGrid->setMinimum(5);
+        horizontalSliderDimXGrid->setMaximum(30);
+        horizontalSliderDimXGrid->setOrientation(Qt::Horizontal);
+
+        gridLayout_9->addWidget(horizontalSliderDimXGrid, 0, 1, 1, 1);
+
+        lcdNumber_9 = new QLCDNumber(layoutWidget1);
+        lcdNumber_9->setObjectName(QString::fromUtf8("lcdNumber_9"));
+
+        gridLayout_9->addWidget(lcdNumber_9, 2, 2, 1, 1);
+
+        label_3 = new QLabel(layoutWidget1);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        gridLayout_9->addWidget(label_3, 2, 0, 1, 1);
+
+        lcdNumber_8 = new QLCDNumber(layoutWidget1);
+        lcdNumber_8->setObjectName(QString::fromUtf8("lcdNumber_8"));
+
+        gridLayout_9->addWidget(lcdNumber_8, 1, 2, 1, 1);
+
+        label = new QLabel(layoutWidget1);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout_9->addWidget(label, 0, 0, 1, 1);
+
+        label_2 = new QLabel(layoutWidget1);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        gridLayout_9->addWidget(label_2, 1, 0, 1, 1);
+
+        lcdNumber_7 = new QLCDNumber(layoutWidget1);
+        lcdNumber_7->setObjectName(QString::fromUtf8("lcdNumber_7"));
+
+        gridLayout_9->addWidget(lcdNumber_7, 0, 2, 1, 1);
+
+        horizontalSliderDimZGrid = new QSlider(layoutWidget1);
+        horizontalSliderDimZGrid->setObjectName(QString::fromUtf8("horizontalSliderDimZGrid"));
+        horizontalSliderDimZGrid->setMinimum(5);
+        horizontalSliderDimZGrid->setMaximum(30);
+        horizontalSliderDimZGrid->setOrientation(Qt::Horizontal);
+
+        gridLayout_9->addWidget(horizontalSliderDimZGrid, 2, 1, 1, 1);
+
+
+        horizontalLayout->addLayout(gridLayout_9);
+
+
+        verticalLayout_2->addWidget(groupBox_2);
+
+        groupBoxRaio = new QGroupBox(layoutWidget);
         groupBoxRaio->setObjectName(QString::fromUtf8("groupBoxRaio"));
         groupBoxRaio->setLayoutDirection(Qt::RightToLeft);
         groupBoxRaio->setAlignment(Qt::AlignCenter);
         layoutWidget2 = new QWidget(groupBoxRaio);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(10, 20, 251, 25));
+        layoutWidget2->setGeometry(QRect(10, 20, 241, 25));
         gridLayout_6 = new QGridLayout(layoutWidget2);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -264,25 +312,13 @@ public:
 
         verticalLayout_2->addWidget(groupBoxRaio);
 
-        groupBoxElipse = new QGroupBox(layoutWidget1);
+        groupBoxElipse = new QGroupBox(layoutWidget);
         groupBoxElipse->setObjectName(QString::fromUtf8("groupBoxElipse"));
         groupBoxElipse->setAlignment(Qt::AlignCenter);
         gridLayout_3 = new QGridLayout(groupBoxElipse);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        labelRx = new QLabel(groupBoxElipse);
-        labelRx->setObjectName(QString::fromUtf8("labelRx"));
-        labelRx->setAlignment(Qt::AlignCenter);
-
-        gridLayout->addWidget(labelRx, 0, 0, 1, 1);
-
-        labelRy = new QLabel(groupBoxElipse);
-        labelRy->setObjectName(QString::fromUtf8("labelRy"));
-        labelRy->setAlignment(Qt::AlignCenter);
-
-        gridLayout->addWidget(labelRy, 1, 0, 1, 1);
-
         labelRz = new QLabel(groupBoxElipse);
         labelRz->setObjectName(QString::fromUtf8("labelRz"));
         labelRz->setAlignment(Qt::AlignCenter);
@@ -296,13 +332,6 @@ public:
 
         gridLayout->addWidget(horizontalSliderRX, 0, 1, 1, 1);
 
-        horizontalSliderRZ = new QSlider(groupBoxElipse);
-        horizontalSliderRZ->setObjectName(QString::fromUtf8("horizontalSliderRZ"));
-        horizontalSliderRZ->setMaximum(15);
-        horizontalSliderRZ->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(horizontalSliderRZ, 2, 1, 1, 1);
-
         horizontalSliderRY = new QSlider(groupBoxElipse);
         horizontalSliderRY->setObjectName(QString::fromUtf8("horizontalSliderRY"));
         horizontalSliderRY->setMaximum(15);
@@ -310,20 +339,39 @@ public:
 
         gridLayout->addWidget(horizontalSliderRY, 1, 1, 1, 1);
 
-        lcdNumber_4 = new QLCDNumber(groupBoxElipse);
-        lcdNumber_4->setObjectName(QString::fromUtf8("lcdNumber_4"));
+        lcdNumber_6 = new QLCDNumber(groupBoxElipse);
+        lcdNumber_6->setObjectName(QString::fromUtf8("lcdNumber_6"));
 
-        gridLayout->addWidget(lcdNumber_4, 0, 2, 1, 1);
+        gridLayout->addWidget(lcdNumber_6, 2, 2, 1, 1);
+
+        horizontalSliderRZ = new QSlider(groupBoxElipse);
+        horizontalSliderRZ->setObjectName(QString::fromUtf8("horizontalSliderRZ"));
+        horizontalSliderRZ->setMaximum(15);
+        horizontalSliderRZ->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSliderRZ, 2, 1, 1, 1);
+
+        labelRx = new QLabel(groupBoxElipse);
+        labelRx->setObjectName(QString::fromUtf8("labelRx"));
+        labelRx->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(labelRx, 0, 0, 1, 1);
 
         lcdNumber_5 = new QLCDNumber(groupBoxElipse);
         lcdNumber_5->setObjectName(QString::fromUtf8("lcdNumber_5"));
 
         gridLayout->addWidget(lcdNumber_5, 1, 2, 1, 1);
 
-        lcdNumber_6 = new QLCDNumber(groupBoxElipse);
-        lcdNumber_6->setObjectName(QString::fromUtf8("lcdNumber_6"));
+        labelRy = new QLabel(groupBoxElipse);
+        labelRy->setObjectName(QString::fromUtf8("labelRy"));
+        labelRy->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(lcdNumber_6, 2, 2, 1, 1);
+        gridLayout->addWidget(labelRy, 1, 0, 1, 1);
+
+        lcdNumber_4 = new QLCDNumber(groupBoxElipse);
+        lcdNumber_4->setObjectName(QString::fromUtf8("lcdNumber_4"));
+
+        gridLayout->addWidget(lcdNumber_4, 0, 2, 1, 1);
 
 
         gridLayout_3->addLayout(gridLayout, 0, 0, 1, 1);
@@ -331,7 +379,7 @@ public:
 
         verticalLayout_2->addWidget(groupBoxElipse);
 
-        groupBoxCaixa = new QGroupBox(layoutWidget1);
+        groupBoxCaixa = new QGroupBox(layoutWidget);
         groupBoxCaixa->setObjectName(QString::fromUtf8("groupBoxCaixa"));
         groupBoxCaixa->setAlignment(Qt::AlignCenter);
         gridLayout_2 = new QGridLayout(groupBoxCaixa);
@@ -400,7 +448,7 @@ public:
 
         layoutWidget3 = new QWidget(centralwidget);
         layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(10, 390, 781, 151));
+        layoutWidget3->setGeometry(QRect(10, 510, 781, 111));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -409,7 +457,7 @@ public:
         groupBoxCoordenadas->setAlignment(Qt::AlignCenter);
         layoutWidget4 = new QWidget(groupBoxCoordenadas);
         layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
-        layoutWidget4->setGeometry(QRect(18, 22, 341, 111));
+        layoutWidget4->setGeometry(QRect(30, 20, 341, 81));
         gridLayout_7 = new QGridLayout(layoutWidget4);
         gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
         gridLayout_7->setContentsMargins(0, 0, 0, 0);
@@ -439,7 +487,7 @@ public:
         groupBox->setAlignment(Qt::AlignCenter);
         layoutWidget5 = new QWidget(groupBox);
         layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
-        layoutWidget5->setGeometry(QRect(20, 20, 351, 111));
+        layoutWidget5->setGeometry(QRect(20, 20, 351, 83));
         gridLayout_8 = new QGridLayout(layoutWidget5);
         gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
         gridLayout_8->setContentsMargins(0, 0, 0, 0);
@@ -503,49 +551,193 @@ public:
 
         horizontalLayout_2->addWidget(groupBox);
 
+        layoutWidget6 = new QWidget(centralwidget);
+        layoutWidget6->setObjectName(QString::fromUtf8("layoutWidget6"));
+        layoutWidget6->setGeometry(QRect(10, 50, 501, 71));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Gill Sans MT"));
+        layoutWidget6->setFont(font);
+        gridLayout_4 = new QGridLayout(layoutWidget6);
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        pushButtonNew = new QPushButton(layoutWidget6);
+        pushButtonNew->setObjectName(QString::fromUtf8("pushButtonNew"));
+        pushButtonNew->setEnabled(true);
+        pushButtonNew->setFont(font);
+        pushButtonNew->setStyleSheet(QString::fromUtf8("\n"
+"#pushButtonSave{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:15px;\n"
+"}"));
+        pushButtonNew->setIconSize(QSize(20, 20));
+
+        gridLayout_4->addWidget(pushButtonNew, 0, 0, 1, 1);
+
+        pushButtonSave = new QPushButton(layoutWidget6);
+        pushButtonSave->setObjectName(QString::fromUtf8("pushButtonSave"));
+        pushButtonSave->setFont(font);
+        pushButtonSave->setStyleSheet(QString::fromUtf8("\n"
+"#pushButtonSave{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:15px;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonSave, 1, 0, 1, 1);
+
+        pushButtonPutSphere = new QPushButton(layoutWidget6);
+        pushButtonPutSphere->setObjectName(QString::fromUtf8("pushButtonPutSphere"));
+        pushButtonPutSphere->setFont(font);
+        pushButtonPutSphere->setStyleSheet(QString::fromUtf8("#pushButtonPutSphere{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonPutSphere, 0, 4, 1, 1);
+
+        pushButtonPutVoxel = new QPushButton(layoutWidget6);
+        pushButtonPutVoxel->setObjectName(QString::fromUtf8("pushButtonPutVoxel"));
+        pushButtonPutVoxel->setFont(font);
+        pushButtonPutVoxel->setStyleSheet(QString::fromUtf8("#pushButtonPutVoxel{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonPutVoxel, 0, 1, 1, 1);
+
+        pushButtonCutBox = new QPushButton(layoutWidget6);
+        pushButtonCutBox->setObjectName(QString::fromUtf8("pushButtonCutBox"));
+        pushButtonCutBox->setFont(font);
+        pushButtonCutBox->setStyleSheet(QString::fromUtf8("\n"
+"#pushButtonCutBox{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonCutBox, 1, 2, 1, 1);
+
+        pushButtonCutEllipsoid = new QPushButton(layoutWidget6);
+        pushButtonCutEllipsoid->setObjectName(QString::fromUtf8("pushButtonCutEllipsoid"));
+        pushButtonCutEllipsoid->setFont(font);
+        pushButtonCutEllipsoid->setStyleSheet(QString::fromUtf8("#pushButtonCutEllipsoid{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonCutEllipsoid, 1, 3, 1, 1);
+
+        pushButtonCutSphere = new QPushButton(layoutWidget6);
+        pushButtonCutSphere->setObjectName(QString::fromUtf8("pushButtonCutSphere"));
+        pushButtonCutSphere->setFont(font);
+        pushButtonCutSphere->setStyleSheet(QString::fromUtf8("#pushButtonCutSphere{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonCutSphere, 1, 4, 1, 1);
+
+        pushButtonCutVoxel = new QPushButton(layoutWidget6);
+        pushButtonCutVoxel->setObjectName(QString::fromUtf8("pushButtonCutVoxel"));
+        pushButtonCutVoxel->setFont(font);
+        pushButtonCutVoxel->setStyleSheet(QString::fromUtf8("#pushButtonCutVoxel{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonCutVoxel, 1, 1, 1, 1);
+
+        pushButtonPutEllipsoid = new QPushButton(layoutWidget6);
+        pushButtonPutEllipsoid->setObjectName(QString::fromUtf8("pushButtonPutEllipsoid"));
+        pushButtonPutEllipsoid->setFont(font);
+        pushButtonPutEllipsoid->setStyleSheet(QString::fromUtf8("#pushButtonPutEllipsoid{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonPutEllipsoid, 0, 3, 1, 1);
+
+        pushButtonPutBox = new QPushButton(layoutWidget6);
+        pushButtonPutBox->setObjectName(QString::fromUtf8("pushButtonPutBox"));
+        pushButtonPutBox->setFont(font);
+        pushButtonPutBox->setStyleSheet(QString::fromUtf8("#pushButtonPutBox{\n"
+"	background-color:#008;\n"
+"	color:#fff;\n"
+"	border-radius:10px;\n"
+"	border:#fff;\n"
+"}"));
+
+        gridLayout_4->addWidget(pushButtonPutBox, 0, 2, 1, 1);
+
+        layoutWidget7 = new QWidget(centralwidget);
+        layoutWidget7->setObjectName(QString::fromUtf8("layoutWidget7"));
+        layoutWidget7->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget7);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        layoutWidget8 = new QWidget(centralwidget);
+        layoutWidget8->setObjectName(QString::fromUtf8("layoutWidget8"));
+        layoutWidget8->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget8);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        LT = new QLabel(centralwidget);
+        LT->setObjectName(QString::fromUtf8("LT"));
+        LT->setGeometry(QRect(130, 0, 311, 41));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Microsoft YaHei UI Light"));
+        LT->setFont(font1);
+        LT->setStyleSheet(QString::fromUtf8("#LT{\n"
+"	font-size:36px;\n"
+"}"));
+        LT->setAlignment(Qt::AlignCenter);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 817, 20));
+        menubar->setGeometry(QRect(0, 0, 845, 20));
         menuArquivo = new QMenu(menubar);
         menuArquivo->setObjectName(QString::fromUtf8("menuArquivo"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
-        toolBar = new QToolBar(MainWindow);
-        toolBar->setObjectName(QString::fromUtf8("toolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
 
         menubar->addAction(menuArquivo->menuAction());
         menuArquivo->addSeparator();
         menuArquivo->addSeparator();
         menuArquivo->addSeparator();
         menuArquivo->addAction(actionSair);
-        toolBar->addAction(actionNew);
-        toolBar->addAction(actionsave);
-        toolBar->addAction(actionPutV);
-        toolBar->addAction(actionCutV);
-        toolBar->addAction(actionPutBox);
-        toolBar->addAction(actionCutB);
-        toolBar->addAction(actionPutE);
-        toolBar->addAction(actionCutE);
-        toolBar->addAction(actionPutEs);
-        toolBar->addAction(actionCutEs);
 
         retranslateUi(MainWindow);
-        QObject::connect(horizontalSliderRaio, SIGNAL(valueChanged(int)), lcdNumberRaio, SLOT(display(int)));
-        QObject::connect(horizontalSliderRX, SIGNAL(valueChanged(int)), lcdNumber_4, SLOT(display(int)));
-        QObject::connect(horizontalSliderRY, SIGNAL(valueChanged(int)), lcdNumber_5, SLOT(display(int)));
-        QObject::connect(horizontalSliderRZ, SIGNAL(valueChanged(int)), lcdNumber_6, SLOT(display(int)));
-        QObject::connect(horizontalSliderDimX, SIGNAL(valueChanged(int)), lcdNumber, SLOT(display(int)));
-        QObject::connect(horizontalSliderDimY, SIGNAL(valueChanged(int)), lcdNumber_3, SLOT(display(int)));
-        QObject::connect(horizontalSliderDimZ, SIGNAL(valueChanged(int)), lcdNumber_2, SLOT(display(int)));
         QObject::connect(horizontalSliderR, SIGNAL(valueChanged(int)), lcdNumberR, SLOT(display(int)));
         QObject::connect(horizontalSliderG, SIGNAL(valueChanged(int)), lcdNumberG, SLOT(display(int)));
         QObject::connect(horizontalSliderB, SIGNAL(valueChanged(int)), lcdNumberB, SLOT(display(int)));
         QObject::connect(actionSair, SIGNAL(triggered()), MainWindow, SLOT(sair()));
         QObject::connect(horizontalSliderZ, SIGNAL(valueChanged(int)), lcdNumberZ, SLOT(display(int)));
+        QObject::connect(horizontalSliderRZ, SIGNAL(valueChanged(int)), lcdNumber_6, SLOT(display(int)));
+        QObject::connect(horizontalSliderRY, SIGNAL(valueChanged(int)), lcdNumber_5, SLOT(display(int)));
+        QObject::connect(horizontalSliderRX, SIGNAL(valueChanged(int)), lcdNumber_4, SLOT(display(int)));
+        QObject::connect(horizontalSliderDimY, SIGNAL(valueChanged(int)), lcdNumber_3, SLOT(display(int)));
+        QObject::connect(horizontalSliderDimZ, SIGNAL(valueChanged(int)), lcdNumber_2, SLOT(display(int)));
+        QObject::connect(horizontalSliderRaio, SIGNAL(valueChanged(int)), lcdNumberRaio, SLOT(display(int)));
+        QObject::connect(horizontalSliderDimX, SIGNAL(valueChanged(int)), lcdNumber, SLOT(display(int)));
+        QObject::connect(horizontalSliderDimXGrid, SIGNAL(valueChanged(int)), lcdNumber_7, SLOT(display(int)));
+        QObject::connect(horizontalSliderDimYGrid, SIGNAL(valueChanged(int)), lcdNumber_8, SLOT(display(int)));
+        QObject::connect(horizontalSliderDimZGrid, SIGNAL(valueChanged(int)), lcdNumber_9, SLOT(display(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -564,21 +756,15 @@ public:
         actionCutE->setText(QApplication::translate("MainWindow", "CutE", nullptr));
         actionPutEs->setText(QApplication::translate("MainWindow", "PutEs", nullptr));
         actionCutEs->setText(QApplication::translate("MainWindow", "CutEs", nullptr));
-        pushButtonNew->setText(QApplication::translate("MainWindow", "NEW", nullptr));
-        pushButtonSave->setText(QApplication::translate("MainWindow", "Save", nullptr));
-        pushButtonPutVoxel->setText(QApplication::translate("MainWindow", "PutVoxel", nullptr));
-        pushButtonCutVoxel->setText(QApplication::translate("MainWindow", "CutVoxel", nullptr));
-        pushButtonPutBox->setText(QApplication::translate("MainWindow", "PutBox", nullptr));
-        pushButtonCutBox->setText(QApplication::translate("MainWindow", "CutBox", nullptr));
-        pushButtonPutEllipsoid->setText(QApplication::translate("MainWindow", "PutEllipsoid", nullptr));
-        pushButtonCutEllipsoid->setText(QApplication::translate("MainWindow", "CutEllipsoid", nullptr));
-        pushButtonPutSphere->setText(QApplication::translate("MainWindow", "PutSphere", nullptr));
-        pushButtonCutSphere->setText(QApplication::translate("MainWindow", "CutSphere", nullptr));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "Dimen\303\247\303\265es do grid", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "  Z  ", nullptr));
+        label->setText(QApplication::translate("MainWindow", "  X ", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "  Y  ", nullptr));
         groupBoxRaio->setTitle(QApplication::translate("MainWindow", "Raio ", nullptr));
         groupBoxElipse->setTitle(QApplication::translate("MainWindow", "Elipse", nullptr));
+        labelRz->setText(QApplication::translate("MainWindow", "Rz", nullptr));
         labelRx->setText(QApplication::translate("MainWindow", "   Rx  ", nullptr));
         labelRy->setText(QApplication::translate("MainWindow", " Ry", nullptr));
-        labelRz->setText(QApplication::translate("MainWindow", "Rz", nullptr));
         groupBoxCaixa->setTitle(QApplication::translate("MainWindow", "Caixa", nullptr));
         labelDimY->setText(QApplication::translate("MainWindow", "DimY", nullptr));
         labelDimZ->setText(QApplication::translate("MainWindow", "DimZ", nullptr));
@@ -589,8 +775,18 @@ public:
         labelB->setText(QApplication::translate("MainWindow", "B", nullptr));
         labelG->setText(QApplication::translate("MainWindow", "G", nullptr));
         labelR->setText(QApplication::translate("MainWindow", "R", nullptr));
+        pushButtonNew->setText(QApplication::translate("MainWindow", "NEW", nullptr));
+        pushButtonSave->setText(QApplication::translate("MainWindow", "Save", nullptr));
+        pushButtonPutSphere->setText(QApplication::translate("MainWindow", "PutSphere", nullptr));
+        pushButtonPutVoxel->setText(QApplication::translate("MainWindow", "PutVoxel", nullptr));
+        pushButtonCutBox->setText(QApplication::translate("MainWindow", "CutBox", nullptr));
+        pushButtonCutEllipsoid->setText(QApplication::translate("MainWindow", "CutEllipsoid", nullptr));
+        pushButtonCutSphere->setText(QApplication::translate("MainWindow", "CutSphere", nullptr));
+        pushButtonCutVoxel->setText(QApplication::translate("MainWindow", "CutVoxel", nullptr));
+        pushButtonPutEllipsoid->setText(QApplication::translate("MainWindow", "PutEllipsoid", nullptr));
+        pushButtonPutBox->setText(QApplication::translate("MainWindow", "PutBox", nullptr));
+        LT->setText(QApplication::translate("MainWindow", "SCULPTOR 3D", nullptr));
         menuArquivo->setTitle(QApplication::translate("MainWindow", "Arquivo", nullptr));
-        toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
 };
